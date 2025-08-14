@@ -1,0 +1,22 @@
+.entries {
+    display: flex;
+    height: 100%;
+}
+
+.entries .entries__sidebar {
+    width: 33.33%;
+    height: 100vh;
+    padding-top: var(--body-spacing);
+    border-right: 1px solid var(--border-color);
+    max-height: var(--popup-height);
+    overflow-y: auto;
+}
+
+.entries .entries__main {
+  width: 66.66%;
+  padding: var(--body-spacing);
+  background-color:#ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
