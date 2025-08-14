@@ -1,0 +1,15 @@
+.signin {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 3rem auto;
+    height: 100%;
+    width: 350px;
+}
+
+.signin__header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-bottom: 1rem;
+}

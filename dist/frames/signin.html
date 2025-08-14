@@ -1,0 +1,24 @@
+<turbo-frame id="app">
+    <div class="signin">
+        <div class="signin__header">
+            <h1 class="text-center">
+            <i class="bi bi-safe-fill"></i> SafePass
+            </h1>
+        </div> 
+        <div data-auth-target="flash"></div>
+        <div class="signin__form">
+            <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="emailInput" placeholder="email@email.com" name="email" data-auth-target="email" autofocus />
+                <label for="emailInput">Email</label>
+            </div>
+            <div class="form-floating mb-3">
+                <input type="password" class="form-control" id="passwordInput" placeholder="Password" name="password" data-auth-target="password" />
+                <label for="passwordInput">Password</label>
+            </div>
+            <div class="mt-3">
+                <button class="btn btn-primary" data-action="click->auth#signIn:prevent" type="submit">Sign in</button>
+            </div>
+        </div>
+    </div>
+
+</turbo-frame>
