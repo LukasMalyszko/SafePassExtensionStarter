@@ -1,6 +1,8 @@
 import { Controller } from '@hotwired/stimulus';
 
 import { getSessionStorage } from '../services/storage_service';
+import fetchEntries from '../services/fetch_entries_service';
+import { sidebar, main } from '../templates/entries_templates';
 
 class EntriesController extends Controller {
     static targets = ['sidebar', 'main'];
@@ -11,6 +13,19 @@ class EntriesController extends Controller {
             document.dispatchEvent(new CustomEvent('auth:signOut'));
             return;
         }
+
+        const entries = await fetchEntries();
+
+        try {
+            this.sidebarTarget.innerHTML = sidebar(entries);
+            this.mainTarget.innerHTML = main(entries[0]);
+        } catch (error) {
+            return;
+        }
+    }
+
+    updateMain({ params }) {
+        this.mainTarget.innerHTML = main(params.entry);
     }
 }
 
