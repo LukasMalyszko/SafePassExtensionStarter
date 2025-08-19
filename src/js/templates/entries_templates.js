@@ -80,7 +80,7 @@ export const main = (entry) => {
               data-action="click->clipboard#copy"
               data-clipboard-content-param="${entry.password}"
             >
-              <i class="bi bi-clipboard-check"></i>
+              <i class="bi bi-clipboard-plus"></i>
             </button>
           </div>
         </li>
